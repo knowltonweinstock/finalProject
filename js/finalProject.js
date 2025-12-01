@@ -16,10 +16,20 @@ let oneKimageArray = []
 let fiveKimageArray = []
 let tenKimageArray = []
 
+let oneKimageXposArray = []
+let oneKimageYposArray = []
+let oneKimageXspeedArray = []
+let oneKimageYspeedArray = []
+
+
+
+
 let startScreenBool = true
 let oneKBool = false 
 let fiveKBool = false
 let tenKBool = false  
+
+
 
 function preload() {
 
@@ -53,7 +63,7 @@ function tenKloadImageArray(){
 
   }
 
- 
+
   
 }
 
@@ -65,6 +75,9 @@ function setup() {
   canvas.style('z-index', '-1')
   background(0);
   fill(255)
+
+  imageMode(CENTER)
+ 
 
   mainmenuButton = createButton('Main Menu');
   mainmenuButton.position(900, 100);
@@ -81,7 +94,7 @@ function setup() {
 
   tenKButton = createButton('10k Tips')
   tenKButton.position(700,100)
-  tenKButton.mousePressed(fiveKStart)
+  tenKButton.mousePressed(tenKStart)
 
   submitButton = createButton('Submit')
   submitButton.position(50,100)
@@ -164,8 +177,14 @@ function startScreen(){
 
   background(0)
   textSize(30)
-  textAlign(CENTER)
+  //textAlign(CENTER)
   imageMode(CENTER)
+
+  image(oneKimageArray[0], 100, 200, 200, 350)
+  image(oneKimageArray[1], 400, 200, 200, 350)
+  image(oneKimageArray[2], 700, 200, 200, 350)
+
+
 
   // text("1.6K", 300, 100)
   // text("5K", 500, 100)
@@ -184,10 +203,11 @@ function oneKStart(){
   oneKBool = true
   background(0)
   textSize(30)
-  textAlign(CENTER)
+  textAlign(LEFT)
   imageMode(CENTER)
   fill(255)
 
+  text("Focus on a steady pace, good breathing, and a proper warm-up to keep your mile strong and controlled.", 50, windowHeight-200, 600)
   
 
    for(let i = 0; i < oneKtable.getRowCount(); i++){
@@ -278,17 +298,10 @@ function draw(){
   }
   
 
-  if(startScreenBool == true){
-    startScreen()
-  }
-
   if(fiveKBool == true){
     fiveKStart()
   }
   
-  if(startScreenBool == true){
-    startScreen()
-  }
 
   if(tenKBool == true){
     tenKStart()
