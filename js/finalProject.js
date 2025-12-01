@@ -16,12 +16,6 @@ let oneKimageArray = []
 let fiveKimageArray = []
 let tenKimageArray = []
 
-let oneKimageXposArray = []
-let oneKimageYposArray = []
-let oneKimageXspeedArray = []
-let oneKimageYspeedArray = []
-
-
 
 
 let startScreenBool = true
@@ -29,6 +23,8 @@ let oneKBool = false
 let fiveKBool = false
 let tenKBool = false  
 
+
+let superMaples
 
 
 function preload() {
@@ -38,6 +34,7 @@ function preload() {
   oneKtable = loadTable('js/1.6k.csv', 'csv', 'header', oneKloadImageArray);
   fiveKtable = loadTable('js/5k.csv', 'csv', 'header', fiveKloadImageArray);
   tenKtable = loadTable('js/10k.csv', 'csv', 'header', tenKloadImageArray);
+  superMaples = loadFont('SuperMaples.ttf')
 
 }
 
@@ -205,6 +202,7 @@ function oneKStart(){
   textSize(30)
   textAlign(LEFT)
   imageMode(CENTER)
+  textFont(superMaples)
   fill(255)
 
   text("Focus on a steady pace, good breathing, and a proper warm-up to keep your mile strong and controlled.", 50, windowHeight-200, 600)
