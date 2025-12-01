@@ -77,7 +77,7 @@ function setup() {
  
 
   mainmenuButton = createButton('Main Menu');
-  mainmenuButton.position(900, 100);
+  mainmenuButton.position(1150, windowHeight-360);
   mainmenuButton.mousePressed(startScreen)
   mainmenuButton.hide();
 
@@ -176,10 +176,19 @@ function startScreen(){
   textSize(30)
   //textAlign(CENTER)
   imageMode(CENTER)
+  text("Elevate your running performance. Find simple, practical running tips to help you hit your goals - whether you're chasing a faster 5K or gearing up for your first 10K", 1150, windowHeight-360, 300)
 
   image(oneKimageArray[0], 100, 200, 200, 350)
   image(oneKimageArray[1], 400, 200, 200, 350)
   image(oneKimageArray[2], 700, 200, 200, 350)
+
+  image(fiveKimageArray[0], 1000, 200, 200, 350)
+  image(fiveKimageArray[1], 1300, 200, 200, 350)
+  image(fiveKimageArray[2], 100, 600, 200, 350)
+
+  image(tenKimageArray[0], 400, 600, 200, 350)
+  image(tenKimageArray[1], 700, 600, 200, 350)
+  image(tenKimageArray[2], 1000, 600, 200, 350)
 
 
 
@@ -213,7 +222,7 @@ function oneKStart(){
       text("Activity: " + oneKtable.getString(i, 'Activity Name'), windowWidth/2, 50)
       text("Time in Seconds: " + oneKtable.getString(i, 'Elapsed Time'), windowWidth/2, 85)
       text("Distance in Kilometers: " + oneKtable.getString(i, 'Distance in kilometers'), windowWidth/2, 115)
-      text(oneKtable.getString(i, 'Moving Time'), windowWidth/2, 140)
+      //text(oneKtable.getString(i, 'Moving Time'), windowWidth/2, 140)
       text("Total Steps: " + oneKtable.getString(i, 'Total Steps'), windowWidth/2, 175)
       image(oneKimageArray[i], windowWidth/2, windowHeight/2, 200, 350)
 
@@ -244,7 +253,7 @@ function fiveKStart(){
       text("Activity: " + fiveKtable.getString(i, 'Activity Name'), windowWidth/2, 50)
       text("Time in Seconds: " + fiveKtable.getString(i, 'Elapsed Time'), windowWidth/2, 85)
       text("Distance in Kilometers: " + fiveKtable.getString(i, 'Distance in kilometers'), windowWidth/2, 115)
-      text(fiveKtable.getString(i, 'Moving Time'), windowWidth/2, 140)
+      //text(fiveKtable.getString(i, 'Moving Time'), windowWidth/2, 140)
       text("Total Steps: " + fiveKtable.getString(i, 'Total Steps'), windowWidth/2, 175)
       image(fiveKimageArray[i], windowWidth/2, windowHeight/2, 200, 350)
 
@@ -275,7 +284,7 @@ function tenKStart(){
       text("Activity: " + tenKtable.getString(i, 'Activity Name'), windowWidth/2, 50)
       text("Time in Seconds: " + tenKtable.getString(i, 'Elapsed Time'), windowWidth/2, 85)
       text("Distance in Kilometers: " + tenKtable.getString(i, 'Distance in kilometers'), windowWidth/2, 115)
-      text(tenKtable.getString(i, 'Moving Time'), windowWidth/2, 140)
+      //text(tenKtable.getString(i, 'Moving Time'), windowWidth/2, 140)
       text("Total Steps: " + tenKtable.getString(i, 'Total Steps'), windowWidth/2, 175)
       image(tenKimageArray[i], windowWidth/2, windowHeight/2, 200, 350)
 
