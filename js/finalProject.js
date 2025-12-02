@@ -77,20 +77,20 @@ function setup() {
  
 
   mainmenuButton = createButton('Main Menu');
-  mainmenuButton.position(1150, windowHeight-360);
+  mainmenuButton.position(50, 100);
   mainmenuButton.mousePressed(startScreen)
   mainmenuButton.hide();
 
   oneKButton = createButton('1.6k Tips')
-  oneKButton.position(300,100)
+  oneKButton.position(1250,80)
   oneKButton.mousePressed(oneKStart)
 
   fiveKButton = createButton('5k Tips')
-  fiveKButton.position(500,100)
+  fiveKButton.position(1250,150)
   fiveKButton.mousePressed(fiveKStart)
 
   tenKButton = createButton('10k Tips')
-  tenKButton.position(700,100)
+  tenKButton.position(1250,220)
   tenKButton.mousePressed(tenKStart)
 
   submitButton = createButton('Submit')
@@ -176,14 +176,13 @@ function startScreen(){
   textSize(30)
   //textAlign(CENTER)
   imageMode(CENTER)
-  text("Elevate your running performance. Find simple, practical running tips to help you hit your goals - whether you're chasing a faster 5K or gearing up for your first 10K", 1150, windowHeight-360, 300)
+  text("Elevate your running performance. Find simple, practical running tips to help you hit your goals - whether you're chasing a faster 5K or gearing up for your first 10K", 1150, windowHeight-400, 300)
 
   image(oneKimageArray[0], 100, 200, 200, 350)
   image(oneKimageArray[1], 400, 200, 200, 350)
   image(oneKimageArray[2], 700, 200, 200, 350)
 
   image(fiveKimageArray[0], 1000, 200, 200, 350)
-  image(fiveKimageArray[1], 1300, 200, 200, 350)
   image(fiveKimageArray[2], 100, 600, 200, 350)
 
   image(tenKimageArray[0], 400, 600, 200, 350)
@@ -207,23 +206,23 @@ function oneKStart(){
   oneKactivityMenu.show()
   startScreenBool = false
   oneKBool = true
-  background(0)
+  background(111, 119, 227)
   textSize(30)
-  textAlign(LEFT)
+  textAlign(CENTER)
   imageMode(CENTER)
   textFont(superMaples)
   fill(255)
 
-  text("Focus on a steady pace, good breathing, and a proper warm-up to keep your mile strong and controlled.", 50, windowHeight-200, 600)
+  text("Focus on a steady pace, good breathing, and a proper warm-up to keep your mile strong and controlled.", 500, windowHeight-150, 600)
   
 
    for(let i = 0; i < oneKtable.getRowCount(); i++){
     if(oneKactivityMenu.value() == oneKtable.getString(i, 'Activity Name')){
       text("Activity: " + oneKtable.getString(i, 'Activity Name'), windowWidth/2, 50)
       text("Time in Seconds: " + oneKtable.getString(i, 'Elapsed Time'), windowWidth/2, 85)
-      text("Distance in Kilometers: " + oneKtable.getString(i, 'Distance in kilometers'), windowWidth/2, 115)
+      text("Distance in Kilometers: " + oneKtable.getString(i, 'Distance in kilometers'), windowWidth/2, 125)
       //text(oneKtable.getString(i, 'Moving Time'), windowWidth/2, 140)
-      text("Total Steps: " + oneKtable.getString(i, 'Total Steps'), windowWidth/2, 175)
+      text("Total Steps: " + oneKtable.getString(i, 'Total Steps'), windowWidth/2, 160)
       image(oneKimageArray[i], windowWidth/2, windowHeight/2, 200, 350)
 
       
@@ -241,20 +240,23 @@ function fiveKStart(){
   fiveKactivityMenu.show()
   startScreenBool = false
   fiveKBool = true
-  background(0)
+  background(165, 88, 191)
   textSize(30)
   textAlign(CENTER)
   imageMode(CENTER)
   fill(255)
+
+  text("Mix easy runs with a bit of speed work and stay consistent each week to build both endurance and confidence.", 500, windowHeight-150, 600)
+  
 
 
    for(let i = 0; i < fiveKtable.getRowCount(); i++){
     if(fiveKactivityMenu.value() == fiveKtable.getString(i, 'Activity Name')){
       text("Activity: " + fiveKtable.getString(i, 'Activity Name'), windowWidth/2, 50)
       text("Time in Seconds: " + fiveKtable.getString(i, 'Elapsed Time'), windowWidth/2, 85)
-      text("Distance in Kilometers: " + fiveKtable.getString(i, 'Distance in kilometers'), windowWidth/2, 115)
+      text("Distance in Kilometers: " + fiveKtable.getString(i, 'Distance in kilometers'), windowWidth/2, 125)
       //text(fiveKtable.getString(i, 'Moving Time'), windowWidth/2, 140)
-      text("Total Steps: " + fiveKtable.getString(i, 'Total Steps'), windowWidth/2, 175)
+      text("Total Steps: " + fiveKtable.getString(i, 'Total Steps'), windowWidth/2, 160)
       image(fiveKimageArray[i], windowWidth/2, windowHeight/2, 200, 350)
 
     
@@ -272,20 +274,22 @@ function tenKStart(){
   tenKactivityMenu.show()
   startScreenBool = false
   tenKBool = true
-  background(0)
+  background(224, 70, 98)
   textSize(30)
   textAlign(CENTER)
   imageMode(CENTER)
   fill(255)
 
+  text("Increase your mileage gradually, practice pacing, and add longer steady runs to keep your energy strong from start to finish.", 500, windowHeight-150, 600)
+  
 
    for(let i = 0; i < tenKtable.getRowCount(); i++){
     if(tenKactivityMenu.value() == tenKtable.getString(i, 'Activity Name')){
       text("Activity: " + tenKtable.getString(i, 'Activity Name'), windowWidth/2, 50)
       text("Time in Seconds: " + tenKtable.getString(i, 'Elapsed Time'), windowWidth/2, 85)
-      text("Distance in Kilometers: " + tenKtable.getString(i, 'Distance in kilometers'), windowWidth/2, 115)
+      text("Distance in Kilometers: " + tenKtable.getString(i, 'Distance in kilometers'), windowWidth/2, 125)
       //text(tenKtable.getString(i, 'Moving Time'), windowWidth/2, 140)
-      text("Total Steps: " + tenKtable.getString(i, 'Total Steps'), windowWidth/2, 175)
+      text("Total Steps: " + tenKtable.getString(i, 'Total Steps'), windowWidth/2, 160)
       image(tenKimageArray[i], windowWidth/2, windowHeight/2, 200, 350)
 
     }
