@@ -174,7 +174,8 @@ function startScreen(){
 
   background(0)
   textSize(30)
-  //textAlign(CENTER)
+  textAlign(CENTER)
+  textFont(superMaples)
   imageMode(CENTER)
   text("Elevate your running performance. Find simple, practical running tips to help you hit your goals - whether you're chasing a faster 5K or gearing up for your first 10K", 1150, windowHeight-400, 300)
 
@@ -244,6 +245,7 @@ function fiveKStart(){
   textSize(30)
   textAlign(CENTER)
   imageMode(CENTER)
+  textFont(superMaples)
   fill(255)
 
   text("Mix easy runs with a bit of speed work and stay consistent each week to build both endurance and confidence.", 500, windowHeight-150, 600)
@@ -278,6 +280,7 @@ function tenKStart(){
   textSize(30)
   textAlign(CENTER)
   imageMode(CENTER)
+  textFont(superMaples)
   fill(255)
 
   text("Increase your mileage gradually, practice pacing, and add longer steady runs to keep your energy strong from start to finish.", 500, windowHeight-150, 600)
